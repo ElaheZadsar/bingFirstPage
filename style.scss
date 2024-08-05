@@ -1,0 +1,224 @@
+$White: rgb(255, 255, 255);
+$Black: rgba(0,0,0,0.4);
+$Navy: #0a0a23;
+$Gray: rgba(34, 34, 34, .9);
+$LightBlue: #B2EBF2;
+
+
+body{
+  font-family: 'Segoe UI' , sans-serif;
+  font-size: 12px;
+  color: $White;
+  background-image: url(https://h2.gifposter.com/bingImages/WulongKarst_1920x1080.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+a {
+  text-decoration: none;
+  color: $White;
+
+  &:hover {
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+header{
+  display: flex;
+}
+.head-left{
+  display: flex;
+  align-content: center;
+  gap: 40px;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+
+.drop-down {
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+button{
+  fill: $White;
+  border: none;
+  background: none;
+}
+.drop-down-options {
+  display: none;
+  background-color: $White;
+  border-radius:4px;
+  box-shadow: 0 10px 10px 0 $Black;
+  z-index: 1000;
+}
+.drop-down:hover .drop-down-options {
+  display: block;
+  z-index: 2000;
+}
+
+.drop-down-options a {
+  display: block;
+  color: $Black;
+  text-decoration: none;
+  padding:10px 50px;
+
+  &:hover {
+    color: $Navy;
+    background-color: $White;
+    border-radius:5px;
+  }
+}
+
+
+.head-right{
+  margin-left: 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0;
+  gap: 30px;
+  position: fixed;
+  top: 14px;
+  right: 72px;
+
+  .weather{
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mobile{
+    margin-top: -12px;
+  }
+}
+
+.search-box {
+  height: 52px;
+  width: 596px;
+  margin: 150px auto auto;
+  border: 1px solid $White;
+  border-radius: 24px;
+  display: flex;
+  gap : 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $White;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: fixed;
+  top: 50px;
+  right: 690px;
+
+}
+
+.search-bar{
+  width: 100%;
+  height: 24px;
+
+
+}
+
+input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: $Gray;
+  }
+}
+
+.icon4{
+  background-image: url(https://r.bing.com/rp/29PIludr0ouX7uObDIN9ORIKUhg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 39px;
+  width: 39px;
+  border-radius: 100%;
+  background-color: $White;
+  float: right;
+  margin-right: 467px;
+  margin-top: -47px;
+  position: fixed;
+  top: 253px;
+  right: 170px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 120px;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  unicode-bidi: isolate;
+}
+
+.ad{
+  border-radius: 6px;
+  height: 140px;
+  width: 180px;
+  overflow: hidden;
+  color: $White;
+  position: relative;
+  cursor: pointer;
+  background-color: $Gray;
+  margin: 5px;
+  display: inline-block;
+}
+h2{
+  font-weight: inherit;
+  font-size: inherit;
+  list-style: none;
+  border-spacing: 0;
+  border: 0;
+  border-collapse: collapse;
+  text-decoration: none;
+  padding: 5PX;
+}
+
+@media only screen and (max-width: 1630px) {
+  .head-left, .weather, .sign-in, .mobile, footer, .icon4{
+    display: none;
+  }
+  .search-box {
+    display: flex;
+    align-content: center;
+    width: 80%;
+    margin-right: -655px;
+    margin-top: 20px;
+    border-radius: 8px;
+  }
+  input::placeholder{
+    color: transparent;
+  }
+  .logo{
+    margin-left: -140px;
+    margin-top: 6px;
+  }
+  .icon2{
+    margin-top: 11px;
+    margin-right: -55px;
+  }
+
+  .icon-1{
+    order: 4;
+    stroke: $LightBlue;
+  }
+
+  .icon-3{
+    order: 2;
+    stroke: $LightBlue;
+  }
+
+  .icon-4{
+    order: 3;
+    stroke: $LightBlue;
+  }
+}
+
